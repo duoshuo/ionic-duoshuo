@@ -1,0 +1,33 @@
+{
+  "name": "ionic-duoshuo",
+  "version": "0.1.0",
+  "authors": [
+    "turing <o.u.turing@gmail.com>"
+  ],
+  "description": "a ionic duoshuo directive based on angular.js",
+  "main": "dist/ionic-duoshuo.min.js",
+  "keywords": [
+    "duoshuo",
+    "ionic",
+    "angular",
+    "angular.js"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/duoshuo/ionic-duoshuo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "examples"
+  ],
+  "dependencies": {
+    "angular": "~1.2.12",
+    "duoshuo": "~0.4.7"
+  },
+  "devDependencies": {
+    "ionic": "*",
+    "debug": "git@github.com:visionmedia/debug.git"
+  }
+}

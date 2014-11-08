@@ -1,0 +1,31 @@
+{
+  "name": "ionic-duoshuo",
+  "version": "0.1.0",
+  "description": "a ionic duoshuo directive based on angular.js",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node_modules/.bin/serve .",
+    "build": "node_modules/.bin/uglifyjs src/ionic-duoshuo.js --mangle --compress -o dist/ionic-duoshuo.min.js --source-map dist/ionic-duoshuo.min.js.map --source-map-url ionic-duoshuo.min.js.map --source-map-root ../src/ionic-duoshuo.js",
+    "dev": "npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duoshuo/ionic-duoshuo.git"
+  },
+  "keywords": [
+    "ionic",
+    "duoshuo",
+    "angular",
+    "phonegap"
+  ],
+  "author": "turing <o.u.turing@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duoshuo/ionic-duoshuo/issues"
+  },
+  "homepage": "https://github.com/duoshuo/ionic-duoshuo",
+  "devDependencies": {
+    "serve": "~1.4.0",
+    "uglify-js": "^2.4.15"
+  }
+}

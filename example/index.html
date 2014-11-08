@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ionic Duoshuo Example</title>
+  <link rel="stylesheet" href="../bower_components/ionic/release/css/ionic.min.css">
+  <script src="http://static.duoshuo.com/embed.unstable.js"></script>
+  <script src="../bower_components/ionic/release/js/ionic.bundle.min.js"></script>
+  <script src="../bower_components/debug/dist/debug.js"></script>
+  <script src="../bower_components/duoshuo/dist/duoshuo.min.js"></script>
+  <script src="../src/ionic-duoshuo.js"></script>
+</head>
+<body ng-app="example">
+  <div class="exmaple" ng-controller="base">
+    <ionic-duoshuo thread-id="exampleThread" ng-model="comments"></ionic-duoshuo>
+  </div>
+  <script>
+    angular
+      .module('example', ['ionic', 'ionic-duoshuo'])
+      .config(['ionicDuoshuoProvider',function(ionicDuoshuoProvider) {
+        ionicDuoshuoProvider.config({
+          short_name: 'ionic-duoshuo-example'
+        });
+      }])
+      .controller('base', ['$rootScope','$scope', function($rootScope, $scope){
+        $rootScope.$watch('comments', function(){
+          // listen the comments' changes
+          debug('example')($scope.comments);
+        })
+      }])
+  </script>
+</body>
+</html>
